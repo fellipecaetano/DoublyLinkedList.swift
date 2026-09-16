@@ -8,14 +8,14 @@ let package = Package(
     ],
     targets: [
         .target(name: "DoublyLinkedList"),
-        .executableTarget(
-            name: "RecentValueCacheExample",
-            dependencies: ["DoublyLinkedList"],
-            path: "Sources/Examples/RecentValueCache"
-        ),
         .testTarget(
             name: "DoublyLinkedListTests",
             dependencies: ["DoublyLinkedList"]
+        ),
+        .target(
+            name: "RecentValueCacheExample",
+            dependencies: ["DoublyLinkedList"],
+            path: "Sources/Examples/RecentValueCache"
         ),
         .testTarget(
             name: "RecentValueCacheExampleTests",
